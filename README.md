@@ -27,7 +27,7 @@
 
 | Project | Architecture & Stack | Key Metrics & Highlights |
 | :--- | :--- | :--- |
-| **[⚡ nullca](https://github.com/MikhaelCat/nullca)** | **Zero-CA eBPF Plaintext TLS, HTTP/2 & gRPC Wire Inspector**<br>`Rust` • `Linux eBPF Uprobes` • `HPACK (RFC 7541)` • `PCAP-NG` | • Intercepts decrypted plaintext directly from process memory (`SSL_read`, `SSL_write`, Go `crypto/tls`) with **zero Root CA**<br>• Completely immune to Certificate Pinning, zero handshake disruption<br>• Custom RFC 7541 HPACK engine, pure Rust ELF 64-bit symbol resolver & live Wireshark PCAP-NG export |
+| **[⚡ nullca](https://github.com/MikhaelCat/nullca)** | **Zero-CA eBPF Plaintext TLS, HTTP/2 & gRPC Wire Inspector**<br>`Rust` • `eBPF Uprobes` • `Ratatui TUI` • `HPACK / Huffman` • `Protobuf` | • Intercepts decrypted plaintext directly from process memory (`SSL_read`, `SSL_write`, GnuTLS, NSS, Go `crypto/tls`) with **zero Root CA**<br>• Real-time **Ratatui Terminal Cockpit**, Go 1.17+ ABIInternal register hooks & `.gopclntab` parser for stripped binaries<br>• RFC 7541 Canonical Huffman engine, schema-less Protobuf dissector, wire-speed Filter DSL & PCAP-NG synthesis |
 | **[⚡ r-rgb](https://github.com/MikhaelCat/r-rgb)** | **High-Performance Linux Driver & Native GUI**<br>`Rust` • `GTK4 / Libadwaita` • `Linux hidraw/sysfs` | • Direct hardware offloading to keyboard MCU with **0% background host CPU**<br>• **~3.6µs** scene synthesis, 50 hardware presets, live audio visualizer<br>• Stress-tested for 20,000 cycles with AddressSanitizer and `cargo audit` (0 vulns) |
 | **[🚩 THEM-CTF_2026](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)** | **Security Research & Offensive Exploitation**<br>`Pwn` • `Reversing` • `Web & Firmware` • `Crypto` | • 16 comprehensive bilingual (EN/RU) writeups & exploit PoCs<br>• Virtualized Lua VM deobfuscation, stripped Rust reversing, Android APK analysis<br>• Custom x86_64 shellcoding, embedded router injection, PRNG cryptanalysis |
 | **[🧭 vibecode](https://github.com/MikhaelCat/vibecode)** | **Autonomous Agentic Travel Engine**<br>`Rust` • `Axum` • `SQLite` • `SSE` • `Leaflet` | • Autonomous LLM agent with strict guardrails against prompt injection and off-topic leaks<br>• 18-rule spatial geo-validation engine (V01–V18) preventing route hallucinations<br>• Asynchronous parallel ingestion pipeline from OSM, weather, and Wikipedia |
@@ -41,8 +41,9 @@
 Hands-on experience across low-level kernel tracing, competitive CTF challenges, and application defense:
 
 * **Kernel & eBPF Observability:**
-  * Zero-copy kernel tracing via Linux `tracefs` and BPF ring buffers.
-  * Direct ELF parsing (`.dynsym`, `.symtab`, `.strtab`, `st_value` translation) to attach uprobes to arbitrary shared libraries without debug symbols.
+  * Zero-copy kernel tracing via Linux `tracefs`, BPF ring buffers, and multi-stream HTTP/2 session multiplexing.
+  * Direct 64-bit ELF parsing (`.dynsym`, `.symtab`, `.strtab`) and Go runtime `.gopclntab` symbol resolution in stripped binaries.
+  * Register-level ABI hooking (System V AMD64 and Go ABIInternal register conventions).
 * **Binary Exploitation & Reversing:**
   * Bytecode virtualization & custom VM architecture analysis (`last_dance`).
   * Disassembly of stripped native Rust binaries (`crabbymonty.exe`), Windows PE entropy analysis, and ELF checkers.
