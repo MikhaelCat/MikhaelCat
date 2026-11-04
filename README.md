@@ -7,13 +7,14 @@
 ╭────────────────────────────────────────────────────────────────────────────╮
 │  user@box:~# whoami --verbose                                              │
 │  OS: Linux x86_64                                                          │
-│  Core: Rust (Systems, Linux Drivers & Microservices)                      │
+│  Core: Rust (Systems, Linux Drivers, eBPF & Low-Level Observability)       │
 │  Security: Binary Exploitation, Reverse Engineering, CTF, DevSecOps        │
 │  Track Record: T-Bank Engineering Intensives & Hackathons                  │
 ╰────────────────────────────────────────────────────────────────────────────╯
 ```
 
 [![GitHub Stars](https://img.shields.io/github/stars/MikhaelCat?style=flat-square&color=ffb86c&labelColor=1e1e2e&logo=github)](https://github.com/MikhaelCat)
+[![eBPF](https://img.shields.io/badge/eBPF-nullca-38bdf8?style=flat-square&labelColor=1e1e2e&logo=linux)](https://github.com/MikhaelCat/nullca)
 [![CTF Writeups](https://img.shields.io/badge/THEM%3F!%20CTF-16%2F16%20Solved-50fa7b?style=flat-square&labelColor=1e1e2e&logo=target)](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)
 [![Rust](https://img.shields.io/badge/Rust-Systems%20%26%20Drivers-f75c7e?style=flat-square&labelColor=1e1e2e&logo=rust)](https://github.com/MikhaelCat/r-rgb)
 [![Open Source](https://img.shields.io/badge/Open%20Source-MIT%20%7C%20GPL-8be9fd?style=flat-square&labelColor=1e1e2e)](https://github.com/MikhaelCat)
@@ -26,6 +27,7 @@
 
 | Project | Architecture & Stack | Key Metrics & Highlights |
 | :--- | :--- | :--- |
+| **[⚡ nullca](https://github.com/MikhaelCat/nullca)** | **Zero-CA eBPF Plaintext TLS, HTTP/2 & gRPC Wire Inspector**<br>`Rust` • `Linux eBPF Uprobes` • `HPACK (RFC 7541)` • `PCAP-NG` | • Intercepts decrypted plaintext directly from process memory (`SSL_read`, `SSL_write`, Go `crypto/tls`) with **zero Root CA**<br>• Completely immune to Certificate Pinning, zero handshake disruption<br>• Custom RFC 7541 HPACK engine, pure Rust ELF 64-bit symbol resolver & live Wireshark PCAP-NG export |
 | **[⚡ r-rgb](https://github.com/MikhaelCat/r-rgb)** | **High-Performance Linux Driver & Native GUI**<br>`Rust` • `GTK4 / Libadwaita` • `Linux hidraw/sysfs` | • Direct hardware offloading to keyboard MCU with **0% background host CPU**<br>• **~3.6µs** scene synthesis, 50 hardware presets, live audio visualizer<br>• Stress-tested for 20,000 cycles with AddressSanitizer and `cargo audit` (0 vulns) |
 | **[🚩 THEM-CTF_2026](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)** | **Security Research & Offensive Exploitation**<br>`Pwn` • `Reversing` • `Web & Firmware` • `Crypto` | • 16 comprehensive bilingual (EN/RU) writeups & exploit PoCs<br>• Virtualized Lua VM deobfuscation, stripped Rust reversing, Android APK analysis<br>• Custom x86_64 shellcoding, embedded router injection, PRNG cryptanalysis |
 | **[🧭 vibecode](https://github.com/MikhaelCat/vibecode)** | **Autonomous Agentic Travel Engine**<br>`Rust` • `Axum` • `SQLite` • `SSE` • `Leaflet` | • Autonomous LLM agent with strict guardrails against prompt injection and off-topic leaks<br>• 18-rule spatial geo-validation engine (V01–V18) preventing route hallucinations<br>• Asynchronous parallel ingestion pipeline from OSM, weather, and Wikipedia |
@@ -34,10 +36,13 @@
 
 ---
 
-### 🛡️ Security & Exploit Research Arsenal
+### 🛡️ Security & Systems Research Arsenal
 
-Hands-on experience across competitive CTF challenges and application defense:
+Hands-on experience across low-level kernel tracing, competitive CTF challenges, and application defense:
 
+* **Kernel & eBPF Observability:**
+  * Zero-copy kernel tracing via Linux `tracefs` and BPF ring buffers.
+  * Direct ELF parsing (`.dynsym`, `.symtab`, `.strtab`, `st_value` translation) to attach uprobes to arbitrary shared libraries without debug symbols.
 * **Binary Exploitation & Reversing:**
   * Bytecode virtualization & custom VM architecture analysis (`last_dance`).
   * Disassembly of stripped native Rust binaries (`crabbymonty.exe`), Windows PE entropy analysis, and ELF checkers.
@@ -55,9 +60,10 @@ Hands-on experience across competitive CTF challenges and application defense:
 ### 🛠️ Technical Stack
 
 ```text
-Languages     ::  Rust (Primary), C#, Java, JavaScript (Node/Rhino), Python, Bash, Lua
-Low-Level/OS  ::  Linux sysfs / hidraw ioctl, POSIX Sockets, x86_64 ASM, Memory Models
+Languages     ::  Rust (Primary), C, C#, Java, JavaScript (Node/Rhino), Python, Bash, Lua
+Low-Level/OS  ::  Linux eBPF / Uprobes, sysfs / hidraw ioctl, POSIX Sockets, x86_64 ASM, Memory Models
 Backends/Web  ::  Axum, REST, Server-Sent Events (SSE), SQLite, GTK4, Libadwaita
+Protocols     ::  TLS, HTTP/1.1, HTTP/2 (HPACK), gRPC, Raw TCP/UDP Sockets, PCAP-NG
 Security Tool ::  Ghidra, IDA Pro, Binary Ninja, GDB (GEF/pwndbg), pwntools, Burp Suite, Wireshark, JADX
 DevOps/CI     ::  Git, GitHub Actions, Docker, Criterion.rs, AddressSanitizer (ASan)
 ```
