@@ -1,84 +1,90 @@
 <div align="center">
 
-# Привет, я Михаил 👋
+# ⚡ Mikhail (`@MikhaelCat`)
+### Systems Engineer • Rust Developer • AppSec & DevSecOps
 
-**Rust Developer • Software Engineer • Security & DevSecOps Enthusiast**
+```text
+╭────────────────────────────────────────────────────────────────────────────╮
+│  user@box:~# whoami --verbose                                              │
+│  OS: Linux x86_64                                                          │
+│  Core: Rust (Systems, Linux Drivers & Microservices)                      │
+│  Security: Binary Exploitation, Reverse Engineering, CTF, DevSecOps        │
+│  Track Record: T-Bank Engineering Intensives & Hackathons                  │
+╰────────────────────────────────────────────────────────────────────────────╯
+```
 
-[![Rust](https://img.shields.io/badge/Rust-1.75%2B-dea584?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![Linux](https://img.shields.io/badge/Linux-Kernel%20%26%20Drivers-FCC624?style=for-the-badge&logo=linux&logoColor=black)](https://kernel.org/)
-[![Security / CTF](https://img.shields.io/badge/Security-CTF%20%7C%20AppSec-e74c3c?style=for-the-badge&logo=target&logoColor=white)](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)
-[![GTK / Libadwaita](https://img.shields.io/badge/GUI-GTK4%20%7C%20Libadwaita-3584e4?style=for-the-badge&logo=gnome&logoColor=white)](https://gitlab.gnome.org/GNOME/libadwaita)
-
-*Специализируюсь на системной разработке на **Rust**, прикладной информационной безопасности (CTF, AppSec/DevSecOps), реверс-инжиниринге и создании инженерных симуляторов.*
-
----
+[![GitHub Stars](https://img.shields.io/github/stars/MikhaelCat?style=flat-square&color=ffb86c&labelColor=1e1e2e&logo=github)](https://github.com/MikhaelCat)
+[![CTF Writeups](https://img.shields.io/badge/THEM%3F!%20CTF-16%2F16%20Solved-50fa7b?style=flat-square&labelColor=1e1e2e&logo=target)](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)
+[![Rust](https://img.shields.io/badge/Rust-Systems%20%26%20Drivers-f75c7e?style=flat-square&labelColor=1e1e2e&logo=rust)](https://github.com/MikhaelCat/r-rgb)
+[![Open Source](https://img.shields.io/badge/Open%20Source-MIT%20%7C%20GPL-8be9fd?style=flat-square&labelColor=1e1e2e)](https://github.com/MikhaelCat)
 
 </div>
 
-## 🚀 Избранные проекты
+---
 
-### ⚡ [r-rgb](https://github.com/MikhaelCat/r-rgb)
-> **Высокопроизводительный драйвер управления подсветкой клавиатур MSI и нативный Libadwaita GUI на чистом Rust для Linux.**
-* **Технологии:** `Rust`, `GTK4`, `Libadwaita`, `Linux hidraw/sysfs ioctl`, `Criterion.rs`, `GitHub Actions CI`
-* **Особенности:**
-  * Прямая трансляция кадров в микроконтроллер клавиатуры (0% нагрузки на CPU хоста).
-  * 50 уникальных аппаратных пресетов анимации, звуковой эквалайзер в реальном времени и термо-реактивный режим.
-  * Время компиляции сцены: **~3.6 µs**, сериализация HID-пакетов: **~6.0 µs**.
-  * Прошел стресс-тесты на 20 000 непрерывных циклов переключения с AddressSanitizer и `cargo audit` (0 уязвимостей).
+### 🚀 Flagship Projects
+
+| Project | Architecture & Stack | Key Metrics & Highlights |
+| :--- | :--- | :--- |
+| **[⚡ r-rgb](https://github.com/MikhaelCat/r-rgb)** | **High-Performance Linux Driver & Native GUI**<br>`Rust` • `GTK4 / Libadwaita` • `Linux hidraw/sysfs` | • Direct hardware offloading to keyboard MCU with **0% background host CPU**<br>• **~3.6µs** scene synthesis, 50 hardware presets, live audio visualizer<br>• Stress-tested for 20,000 cycles with AddressSanitizer and `cargo audit` (0 vulns) |
+| **[🚩 THEM-CTF_2026](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)** | **Security Research & Offensive Exploitation**<br>`Pwn` • `Reversing` • `Web & Firmware` • `Crypto` | • 16 comprehensive bilingual (EN/RU) writeups & exploit PoCs<br>• Virtualized Lua VM deobfuscation, stripped Rust reversing, Android APK analysis<br>• Custom x86_64 shellcoding, embedded router injection, PRNG cryptanalysis |
+| **[🧭 vibecode](https://github.com/MikhaelCat/vibecode)** | **Autonomous Agentic Travel Engine**<br>`Rust` • `Axum` • `SQLite` • `SSE` • `Leaflet` | • Autonomous LLM agent with strict guardrails against prompt injection and off-topic leaks<br>• 18-rule spatial geo-validation engine (V01–V18) preventing route hallucinations<br>• Asynchronous parallel ingestion pipeline from OSM, weather, and Wikipedia |
+| **[🌊 PPS-submarine](https://github.com/MikhaelCat/PPS-submarine)** | **Robotics & Physics Simulator**<br>`C#` • `Unity` • `UDP Sockets` • `JSON API` | • 3D Autonomous Underwater Vehicle (AUV) dynamics simulation<br>• Decoupled network model: high-rate telemetry stream (8081) & command API (8080) |
+| **[🎮 Mindustry Tooling](https://github.com/MikhaelCat?tab=repositories&q=mindustry)** | **Game Networking & Custom Shaders**<br>`Java` • `JavaScript (Rhino)` | • **[Scheme-Zize](https://github.com/MikhaelCat/Scheme-Zize):** 512×512 schematics & crash-safe dedicated server RPC<br>• **[unit-table](https://github.com/MikhaelCat/unit-table):** Compact real-time battle HUD with zero draw-tick overhead<br>• **[CanvasForge](https://github.com/MikhaelCat/CanvasForge):** Bayer & Floyd–Steinberg dithering pixel-art compiler |
 
 ---
 
-### 🚩 [THEM-CTF_2026-writeups](https://github.com/MikhaelCat/THEM-CTF_2026-writeups)
-> **Коллекция подробных двуязычных (RU / EN) разборов тасков и эксплойтов с соревнований THEM?! CTF 2026.**
-* **16 решенных тасков по ключевым дисциплинам ИБ:**
-  * **Реверс-инжиниринг:** Деобфускация кастомной виртуальной машины Lua (`last_dance`), реверс нативного Rust-бинарника (`🦀?`), анализ Android APK (`Good9`), распаковка Windows PE и энтропийный анализ (`Entropy Core`).
-  * **Pwn & Shellcode:** Написание x86_64 шеллкода в ограниченной памяти (`Baby Shellcode`), эксплуатация ELF-бинарников (`lesgo`).
-  * **Web & Сетевые устройства:** Обход аутентификации и инъекции команд в прошивках роутеров (`A Cute Magical Router Gateway` + `Revenge`), веб-эксплуатация уровня 1000 очков (`SEAM`).
-  * **Криптография:** Анализ каскадных шифров и коллизий (`Cascadino Chain`, `No 7race`, `Despacito`).
+### 🛡️ Security & Exploit Research Arsenal
+
+Hands-on experience across competitive CTF challenges and application defense:
+
+* **Binary Exploitation & Reversing:**
+  * Bytecode virtualization & custom VM architecture analysis (`last_dance`).
+  * Disassembly of stripped native Rust binaries (`crabbymonty.exe`), Windows PE entropy analysis, and ELF checkers.
+  * Shellcoding under memory constraints (`Baby Shellcode`).
+  * Android APK decompilation and client-side validation tampering (`Good9`).
+* **Web, Firmware & Embedded Security:**
+  * Reverse-engineering proprietary USB HID communication protocols via Wireshark and Linux `ioctl`.
+  * Embedded device web interface exploitation: authentication bypass, command injection, and state pollution (`A Cute Magical Router Gateway`).
+* **DevSecOps & Memory Safety:**
+  * Pure memory-safe systems development with zero-overhead abstractions in Rust.
+  * Integration of automated static analysis, fuzzing, and CI sanitizers.
 
 ---
 
-### 🧭 [vibecode](https://github.com/MikhaelCat/vibecode)
-> **Автономный агентный планировщик поездок по Приморскому краю на Rust.**
-* **Технологии:** `Rust`, `Axum`, `SQLite`, `Server-Sent Events (SSE)`, `LLM Agent Cycle`, `Leaflet`
-* **Особенности:**
-  * Агентный цикл с защитой от промпт-инъекций и оффтоп-запросов (Guardrails).
-  * 18 правил пространственной гео-валидации (V01–V18), исключающих ошибки в маршрутах.
-  * Параллельный асинхронный сбор данных (OSM, погода, достопримечательности, бронирование).
+### 🛠️ Technical Stack
+
+```text
+Languages     ::  Rust (Primary), C#, Java, JavaScript (Node/Rhino), Python, Bash, Lua
+Low-Level/OS  ::  Linux sysfs / hidraw ioctl, POSIX Sockets, x86_64 ASM, Memory Models
+Backends/Web  ::  Axum, REST, Server-Sent Events (SSE), SQLite, GTK4, Libadwaita
+Security Tool ::  Ghidra, IDA Pro, Binary Ninja, GDB (GEF/pwndbg), pwntools, Burp Suite, Wireshark, JADX
+DevOps/CI     ::  Git, GitHub Actions, Docker, Criterion.rs, AddressSanitizer (ASan)
+```
 
 ---
 
-### 🌊 [PPS-submarine](https://github.com/MikhaelCat/PPS-submarine)
-> **3D-симулятор автономного необитаемого подводного аппарата (АНПА) с протоколом телеметрии реального времени.**
-* **Технологии:** `C#`, `Unity`, `UDP Sockets`, `JSON API`
-* **Особенности:** Раздельная сетевая архитектура: управляющий сокет команд (Requests 8080) и высокочастотный стрим телеметрии (Stream 8081).
+### 🎓 Engineering Programs & Intensives
 
----
-
-### 🎮 Моддинг и тулинг (Mindustry Ecosystem)
-* **[Scheme-Zize](https://github.com/MikhaelCat/Scheme-Zize)** (`Java`) — единый jar-билд для клиента и выделенных серверов (Headless-safe), поддержка схем размером до **512×512**, сетевой протокол администрирования Scheme Net.
-* **[unit-table](https://github.com/MikhaelCat/unit-table)** (`JavaScript / Rhino`) — компактный HUD-модуль отслеживания активных боевых единиц на карте в реальном времени.
-* **[CanvasForge](https://github.com/MikhaelCat/CanvasForge)** (`JavaScript`) — компилятор графики в игровые схемы полотен с алгоритмами дизеринга Bayer и Floyd–Steinberg.
-
----
-
-## 🛠️ Стек технологий
-
-* **Языки программирования:** Rust, C#, Java, JavaScript, Python, Bash, Lua
-* **Системный уровень & Сети:** Linux API, `sysfs` / `hidraw`, UDP/TCP сокеты, REST, SSE, Axum
-* **Информационная безопасность:** Реверс-инжиниринг (Ghidra, IDA Pro, JADX), шеллкодинг, анализ сетевого трафика (Wireshark), Web-security (Burp Suite), криптоанализ
-* **Инструменты & DevOps:** Git, GitHub Actions (CI/CD), Docker, Criterion.rs, AddressSanitizer
-
----
-
-## 🎓 Опыт и образовательные программы
-
-* **Проектные смены и интенсивы Т-Банка / Т-Образование:**
-  * Командная разработка прикладных микросервисов и участие в хакатонах.
-  * Проектирование надежных бэкендов, интеграция внешних API, реализация guardrails и валидации пользовательского ввода.
+* **T-Bank Engineering & Security Bootcamps / Hackathons:**
+  * End-to-end service design, backend microservices architecture, and high-intensity hackathon sprints.
+  * Implementation of defense-in-depth principles: input sanitization, tokenization, and LLM-agent security guardrails.
 
 ---
 
 <div align="center">
-<sub>Репозитории и код открыты для код-ревью и предложений. Связаться можно через GitHub Issues или Telegram.</sub>
+
+### 📊 GitHub Activity & Metrics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MikhaelCat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="MikhaelCat's GitHub stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikhaelCat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Top Languages" width="42%" />
+</p>
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MikhaelCat&theme=tokyo-night&hide_border=true&bg_color=0d1117)](https://github.com/MikhaelCat)
+
+```text
+[EOF] -- Open for collaboration on Systems Programming & Security Engineering
+```
+
 </div>
